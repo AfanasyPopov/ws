@@ -1,0 +1,21 @@
+{
+  "name": "ws",
+  "version": "1.0.0",
+  "description": "The Project description",
+  "main": "browser.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "http-server": "^0.10.0",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "hello",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "optionalDependencies": {
+    "utf-8-validate": "^3.0.4"
+  }
+}
