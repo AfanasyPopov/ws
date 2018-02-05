@@ -1,17 +1,2918 @@
 [33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
 [33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
-/var/www/html/Codiad/workspace/ws/index.js:98
-var s = http.createServer(function(request, response) {
-             ^
-
-TypeError: http.createServer is not a function
-    at Object.<anonymous> (/var/www/html/Codiad/workspace/ws/index.js:98:14)
-    at Module._compile (module.js:569:30)
-    at Object.Module._extensions..js (module.js:580:10)
-    at Module.load (module.js:503:32)
-    at tryModuleLoad (module.js:466:12)
-    at Function.Module._load (module.js:458:3)
-    at Function.Module.runMain (module.js:605:10)
-    at startup (bootstrap_node.js:158:16)
-    at bootstrap_node.js:575:3
-error: Forever detected script exited with code: 1
+Listening on http://127.0.0.1:8101/
+Listening Express on port:8100
+/var/www/html/Codiad/workspace/ws listening on *:8080
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+user disconnected
+a user connected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+user disconnected
+a user connected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+a user connected
+user disconnected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+user disconnected
+a user connected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+user disconnected
+a user connected
+a user connected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+user disconnected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+user disconnected
+a user connected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+user disconnected
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+user disconnected
+a user connected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+a user connected
+user disconnected
+user disconnected
+a user connected
+user disconnected
+user disconnected
+user disconnected
+a user connected
+a user connected
+a user connected
+user disconnected
+user disconnected
+user disconnected
+a user connected
+user disconnected
+a user connected
+a user connected
+a user connected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+a user connected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+a user connected
+user disconnected
+a user connected
+a user connected
+user disconnected
+a user connected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+user disconnected
+a user connected
+a user connected
+user disconnected
+a user connected
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+login event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+login event/send DATA lenght: 1
+Express:{"email":"afanasy.popov@gmail.com","password":"f4b3b5d2f1555b90b513a0a162af79d8","isautologin":true,"isLogedIn":true}
+getUserList event: afanasy.popov@gmail.com;f4b3b5d2f1555b90b513a0a162af79d8
+login event/SQL request not started
+login event/DATA: [ anonymous {
+    id: 1,
+    uuid_key: '5a4b298a-f903-4fbe-b53b-049b1a0d8d9b',
+    username: 'Афанасий',
+    last_name: 'Попов',
+    email: 'afanasy.popov@gmail.com',
+    active: true,
+    description: 'Администратор Smart DAS ',
+    contragent_flag: true,
+    user_flag: true,
+    group_flag: false,
+    organization: 'ЗАО "РКС"',
+    role_name: 'root',
+    user_pass: 'f4b3b5d2f1555b90b513a0a162af79d8' } ]
+getUserList event/send DATA lenght: 1
+user disconnected
+a user connected
+user disconnected
+a user connected
+user disconnected
+a user connected
+user disconnected
+a user connected
+user disconnected
+error: Forever detected script was killed by signal: SIGKILL

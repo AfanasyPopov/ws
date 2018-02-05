@@ -97,7 +97,7 @@ io.on('connection', function(socket){
 http.listen(8080, function(){
   console.log(__dirname+' listening on *:8080');
 });
-//---HTTP-------------------------------    
+//---HTTP----отстой НЕРАБОТАЕТ---------------------------    
 var http = require('http');
 var port = 8101;
 function accept(req, res) {
@@ -125,10 +125,10 @@ function accept(req, res) {
 	
 }
 // ------ этот код запускает веб-сервер -------
-var s=http.createServer(accept).listen(port);
-console.log("Listening on http://127.0.0.1:" + port + "/");
+//var s=http.createServer(accept).listen(port);
+//console.log("Listening on http://127.0.0.1:" + port + "/");
 
-//-------EXPRESS-------------------------- 
+//-------EXPRESS-рабочий код для POST 8100------------------------- 
 var port = 8100;
 
 var expresss = require('express')
@@ -150,15 +150,29 @@ app.get('/', function(req, res, next) {
 });
 
 app.post('/login', function(req, res){
-  console.log('Express:'+JSON.stringify(req.body));      // your JSON
-  data ={
-    email: 'test@test.com',
-    password: '"login" EXPRESS fucking test again',
-    userAdge: 8100,
-  };
+	console.log('Express:'+JSON.stringify(req.body));      // your JSON
+    console.log('login event: ' + req.body.email +';'+req.body.password);
+    db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization, ur.role_name, uc.user_pass FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )   INNER JOIN user_cred uc ON ( u.uuid_key = uc.user_key  ) WHERE u.email=$1 AND uc.user_pass=$2',[req.body.email,req.body.password])
+        .then(data => {
+            console.log('login event/DATA:', data);
+            if (data.length>0 ){
+					res.send(JSON.stringify(data[0]));    // send SQL[0] result
+        			console.log('login event/send DATA lenght:', data.length);
+            } else {
+            		err_mess='пара логин/пароль не найдены.';
+					console.log('login event/not authorized send:'+ err_mess);
+					res.send(JSON.stringify(err_mess));    // echo the result back
+            }
+        })
+        .catch(error => {
+            		err_mess='ошибка выполнения SQL запроса.';
+					console.log('login event/ERROR QSL request:'+ err_mess);
+					res.send(JSON.stringify(err_mess));    // echo the result back
+        }) 
 
-   res.send(JSON.stringify(data));    // echo the result back
+	console.log('login event/SQL request not started');
 });
+
 app.post('/addUser', function(req, res){
   console.log('Express:'+JSON.stringify(req.body));      // your JSON
   data ={
@@ -168,6 +182,57 @@ app.post('/addUser', function(req, res){
   };
    res.send(JSON.stringify(data));    // echo the result back
 });
+
+app.post('/getUserList', function(req, res){
+	var dataWithDir =[{
+        data: [],
+        users:[],
+        dir:[]
+    }];
+	console.log('Express:'+JSON.stringify(req.body));      // your JSON
+    console.log('getUserList  req.body: ' + req.body.email +';'+req.body.password);
+    db.any('SELECT ur.id as id, ur.caption as label FROM "public".user_roles ur	ORDER BY ur.id ASC')
+    .then (data=>{
+        dataWithDir[0].dir=[{
+            user_role:data, 
+            other_dir:data               
+        }];
+    })
+    db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization, ur.role_name, uc.user_pass FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )   INNER JOIN user_cred uc ON ( u.uuid_key = uc.user_key  )',[])
+        .then(data => {
+            console.log('getUserList event/data:', data);
+            if (data.length>0 ){
+            		dataWithDir[0].users = data;
+                    console.log('getUserList event/send dataWithDir.lenght:');
+                    console.log(dataWithDir.length);
+                    console.log('getUserList event/send dataWithDir[dir] :');
+                    console.log(dataWithDir['dir']);
+                    console.log('getUserList event/send JSON.stringify(dataWithDir) :');
+                    console.log(JSON.stringify(dataWithDir));
+					res.send(JSON.stringify(dataWithDir));    // send SQL[0] result
+            } else {
+            		err_mess='пара логин/пароль не найдены.';
+					console.log('getUserList event/not authorized send:'+ err_mess);
+					res.send(JSON.stringify(err_mess));    // echo the result back
+            }
+        })
+        .catch(error => {
+            		err_mess='ошибка выполнения SQL запроса.';
+					console.log('getUserList event/ERROR QSL request:'+ err_mess);
+					res.send(JSON.stringify(err_mess));    // echo the result back
+        }) 
+});
+
+function addDir() {
+	db.any('SELECT ur.id as id, ur.caption as label FROM "public".user_roles ur	ORDER BY ur.id ASC')
+		.then (data=>{
+			dir['user_role'] = data;
+			//console.log('addDir.dir:');
+			//console.log(dir);
+        })
+    return dir;
+
+};
 
 app.listen(port);
 console.log("Listening Express on port:" + port);
