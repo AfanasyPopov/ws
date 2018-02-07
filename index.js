@@ -95,7 +95,7 @@ io.on('connection', function(socket){
 });
 
 http.listen(8080, function(){
-  console.log(__dirname+' listening on *:8080');
+  console.log('SOCKET Listening on port:8080');
 });
 //---HTTP----отстой НЕРАБОТАЕТ---------------------------    
 var http = require('http');
@@ -182,27 +182,39 @@ app.post('/addUser', function(req, res){
   };
    res.send(JSON.stringify(data));    // echo the result back
 });
-
+app.post('/updateUser', function(req, res){
+    console.log('updateUser:'+JSON.stringify(req.body));      // your JSON
+    var mess="УСПЕШНО";
+    res.send(JSON.stringify(mess));    // send SQL[0] result
+});
 app.post('/getUserList', function(req, res){
-	var dataWithDir =[{
+    
+    var dataWithDir ={
         data: [],
         users:[],
-        dir:[]
-    }];
+        dir:{
+            role_in_project:'',
+            status:''
+        }
+    };
+      
 	console.log('Express:'+JSON.stringify(req.body));      // your JSON
     console.log('getUserList  req.body: ' + req.body.email +';'+req.body.password);
-    db.any('SELECT ur.id as id, ur.caption as label FROM "public".user_roles ur	ORDER BY ur.id ASC')
+    db.any('SELECT ur.id as value, ur.caption as label FROM "public".user_roles ur	ORDER BY ur.id ASC')
     .then (data=>{
-        dataWithDir[0].dir=[{
-            user_role:data, 
-            other_dir:data               
-        }];
+        dataWithDir.dir.role_in_project = data;
     })
-    db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization, ur.role_name, uc.user_pass FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )   INNER JOIN user_cred uc ON ( u.uuid_key = uc.user_key  )',[])
+    console.log("role_name: "+ JSON.stringify(dataWithDir));
+    db.any('SELECT us.id as value, us.caption as label FROM "public".user_status us ORDER BY us.id ASC')
+    .then (data=>{
+        dataWithDir.dir.status = data;
+    })
+    console.log("user_status: "+ JSON.stringify(dataWithDir));
+    db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization,u.img_ref, ur.caption as role_in_project, uc.user_pass, us.caption as status FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )   INNER JOIN user_cred uc ON ( u.uuid_key = uc.user_key  ) INNER JOIN user_status us ON ( u.status = us.id  )',[])
         .then(data => {
             console.log('getUserList event/data:', data);
             if (data.length>0 ){
-            		dataWithDir[0].users = data;
+            		dataWithDir.users = data;
                     console.log('getUserList event/send dataWithDir.lenght:');
                     console.log(dataWithDir.length);
                     console.log('getUserList event/send dataWithDir[dir] :');
@@ -220,7 +232,8 @@ app.post('/getUserList', function(req, res){
             		err_mess='ошибка выполнения SQL запроса.';
 					console.log('getUserList event/ERROR QSL request:'+ err_mess);
 					res.send(JSON.stringify(err_mess));    // echo the result back
-        }) 
+        })
+         
 });
 
 function addDir() {
@@ -235,4 +248,4 @@ function addDir() {
 };
 
 app.listen(port);
-console.log("Listening Express on port:" + port);
+console.log("EXPRESS: Listening on port:" + port);
