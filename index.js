@@ -3,6 +3,7 @@ var http = require('http').Server(app1);
 var io = require('socket.io')(http);
 var md5 = require ('md5');
 const pgp = require('pg-promise')();
+var bodyParser = require('body-parser');
 const cn = {
     host: 'localhost',
     port: 5432,
@@ -11,7 +12,7 @@ const cn = {
     password: 'Loop'
 };
 const db = pgp(cn);
-
+app1.use(bodyParser.json({ limit: '50mb' }))
 app1.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
@@ -142,8 +143,9 @@ app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT, OPTIONS, HEAD');
   next();
 });
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 
+app.use(bodyParser.json({ limit: '50mb' }))
 
 app.get('/', function(req, res, next) {
   // Handle the get for this route
@@ -174,78 +176,127 @@ app.post('/login', function(req, res){
 });
 
 app.post('/addUser', function(req, res){
-  console.log('Express:'+JSON.stringify(req.body));      // your JSON
-  data ={
-    email: 'test@test.com',
-    password: '"addUser" EXPRESS fucking test again',
-    userAdge: 8100,
-  };
-   res.send(JSON.stringify(data));    // echo the result back
+    console.log('Express addUser:'+JSON.stringify(req.body));      // your JSON
+    var item =req.body.item;
+    sqlReq="WITH x AS (INSERT INTO user_cred (user_key) VALUES (uuid_generate_v4()) RETURNING user_key),"+
+      "y AS (INSERT INTO users ( uuid_key,username,last_name,description,status,role_in_project)"+
+      "SELECT user_key,$1,$2,$3,1,1 FROM x RETURNING *)"+
+      "SELECT * FROM y;";
+      db.any(sqlReq,[item.name, item.last_name, item.about])
+      .then(data=>{
+        console.log('Express addUser res:'+JSON.stringify(data));      // your JSON
+          res.send(JSON.stringify(data));    // echo the result back
+      })
+});
+
+app.post('/delUser', function(req, res){
+    console.log('Express delUser:'+JSON.stringify(req.body));      // your JSON
+    var item =req.body.item;
+
+    const makeAsyncRequest = async () => {
+        var deletedUser = await  db.any('DELETE FROM users where uuid_key=$1 RETURNING *',[item.uuid_key]);
+        await  db.any('DELETE FROM user_cred where user_key=$1 RETURNING *',[item.uuid_key]);
+        res.send(JSON.stringify(deletedUser));    // send SQL result    
+      }
+      makeAsyncRequest()
+        .catch(err => {
+            console.log(err);
+        })
+
+});
+    
+app.post('/toggleUserActive', function(req, res){
+    console.log('updateUser:'+JSON.stringify(req.body));      // your JSON
+    item = req.body.item;
+    str=objToSQLforUpdate(item);
+    strSQL='UPDATE users SET '+str+' WHERE users.uuid_key =$1';
+    console.log(strSQL);
+    /*db.any(strSQL,[item.uuid_key])
+        .then((res)=>{
+             mess="УСПЕШНО";
+            res.send(mess);    // send SQL responce 
+            console.log('updateUser res:'+JSON.stringify(mess));      // your JSON
+        })
+        .catch (err=>{
+            if (Object.keys(err).length>0){
+                 mess="С ОШИБКОЙ";
+            } else{
+                 mess="УСПЕШНО";
+            }
+            res.send(JSON.stringify(mess));    // send error
+            console.log('updateUser:'+JSON.stringify(err));      // your JSON
+            console.log('updateUser:'+JSON.stringify(mess));      // your JSON
+        })*/
 });
 app.post('/updateUser', function(req, res){
     console.log('updateUser:'+JSON.stringify(req.body));      // your JSON
-    var mess="УСПЕШНО";
-    res.send(JSON.stringify(mess));    // send SQL[0] result
-});
-app.post('/getUserList', function(req, res){
-    
-    var dataWithDir ={
-        data: [],
-        users:[],
-        dir:{
-            role_in_project:'',
-            status:''
-        }
-    };
-      
-	console.log('Express:'+JSON.stringify(req.body));      // your JSON
-    console.log('getUserList  req.body: ' + req.body.email +';'+req.body.password);
-    db.any('SELECT ur.id as value, ur.caption as label FROM "public".user_roles ur	ORDER BY ur.id ASC')
-    .then (data=>{
-        dataWithDir.dir.role_in_project = data;
-    })
-    console.log("role_name: "+ JSON.stringify(dataWithDir));
-    db.any('SELECT us.id as value, us.caption as label FROM "public".user_status us ORDER BY us.id ASC')
-    .then (data=>{
-        dataWithDir.dir.status = data;
-    })
-    console.log("user_status: "+ JSON.stringify(dataWithDir));
-    db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization,u.img_ref, ur.caption as role_in_project, uc.user_pass, us.caption as status FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )   INNER JOIN user_cred uc ON ( u.uuid_key = uc.user_key  ) INNER JOIN user_status us ON ( u.status = us.id  )',[])
-        .then(data => {
-            console.log('getUserList event/data:', data);
-            if (data.length>0 ){
-            		dataWithDir.users = data;
-                    console.log('getUserList event/send dataWithDir.lenght:');
-                    console.log(dataWithDir.length);
-                    console.log('getUserList event/send dataWithDir[dir] :');
-                    console.log(dataWithDir['dir']);
-                    console.log('getUserList event/send JSON.stringify(dataWithDir) :');
-                    console.log(JSON.stringify(dataWithDir));
-					res.send(JSON.stringify(dataWithDir));    // send SQL[0] result
-            } else {
-            		err_mess='пара логин/пароль не найдены.';
-					console.log('getUserList event/not authorized send:'+ err_mess);
-					res.send(JSON.stringify(err_mess));    // echo the result back
+    item = req.body.item;
+    str=objToSQLforUpdate(item);
+    strSQL='UPDATE users SET '+str+' WHERE users.uuid_key =$1';
+    console.log(strSQL);
+    db.any(strSQL,[item.uuid_key])
+        .then((res)=>{
+             mess="УСПЕШНО";
+            res.send(mess);    // send SQL responce 
+            console.log('updateUser res:'+JSON.stringify(mess));      // your JSON
+        })
+        .catch (err=>{
+            if (Object.keys(err).length>0){
+                 mess="С ОШИБКОЙ";
+            } else{
+                 mess="УСПЕШНО";
             }
+            res.send(JSON.stringify(mess));    // send error
+            console.log('updateUser:'+JSON.stringify(err));      // your JSON
+            console.log('updateUser:'+JSON.stringify(mess));      // your JSON
         })
-        .catch(error => {
-            		err_mess='ошибка выполнения SQL запроса.';
-					console.log('getUserList event/ERROR QSL request:'+ err_mess);
-					res.send(JSON.stringify(err_mess));    // echo the result back
-        })
-         
 });
 
-function addDir() {
-	db.any('SELECT ur.id as id, ur.caption as label FROM "public".user_roles ur	ORDER BY ur.id ASC')
-		.then (data=>{
-			dir['user_role'] = data;
-			//console.log('addDir.dir:');
-			//console.log(dir);
+app.post('/getUserList', function(req, res){
+    console.log("getUserList begin");
+    const makeRequest = async () => {
+        var dataWithDir ={
+            data: [],
+            users:[],
+            dir:{
+                role_in_project:'',
+                status:''
+            }
+        };    
+        console.log('getUserList async start:------"'+JSON.stringify(dataWithDir));
+        dataWithDir.dir.role_in_project = await  db.any('SELECT ur.id as value, ur.caption as label FROM "public".user_roles ur	ORDER BY ur.id ASC');
+        dataWithDir.dir.status = await db.any('SELECT us.id as value, us.caption as label FROM "public".user_status us ORDER BY us.id ASC');
+        dataWithDir.users = await db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization,u.img_ref, ur.caption as role_in_project, us.caption as status FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )  INNER JOIN user_status us ON ( u.status = us.id  )',[]);
+        console.log('async end:------"'+JSON.stringify(dataWithDir));
+        res.send(JSON.stringify(dataWithDir));    // send SQL result    
+      }
+      console.log(" getUserList before makeRequest() ");
+      makeRequest()
+        .catch(err => {
+            console.log(err);
         })
-    return dir;
+    console.log("getUserList end");
+});
 
-};
+function objToSQLforUpdate (item){
+    count=0;
+    str='';
+    length=Object.keys(item).length;
+    for (var element in item) {
+        count++;
+        if (typeof(item[element])=='string'){ 
+            value = "'"+item[element]+"'"
+        } else {
+            value=item[element]
+        }
+        str=str+element+' = ' + value;
+        if (count<length)  {
+            str=str+',';
+        }
+    }
+    return str;
+}
 
 app.listen(port);
 console.log("EXPRESS: Listening on port:" + port);
+
