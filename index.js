@@ -4,6 +4,7 @@ var io = require('socket.io')(http);
 var md5 = require ('md5');
 const pgp = require('pg-promise')();
 var bodyParser = require('body-parser');
+var fs = require("fs");
 const cn = {
     host: 'localhost',
     port: 5432,
@@ -16,7 +17,7 @@ app1.use(bodyParser.json({ limit: '50mb' }))
 app1.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
-
+const img_db_ref = '../files_db/';
 
 io.on('connection', function(socket){
   console.log('a user connected');
@@ -131,6 +132,8 @@ function accept(req, res) {
 
 //-------EXPRESS-рабочий код для POST 8100------------------------- 
 var port = 8100;
+var img_id=null;
+
 
 var expresss = require('express')
   , bodyParser = require('body-parser');
@@ -176,19 +179,30 @@ app.post('/login', function(req, res){
 });
 
 app.post('/addUser', function(req, res){
-    console.log('Express addUser:'+JSON.stringify(req.body));      // your JSON
     var item =req.body.item;
     sqlReq="WITH x AS (INSERT INTO user_cred (user_key) VALUES (uuid_generate_v4()) RETURNING user_key),"+
       "y AS (INSERT INTO users ( uuid_key,username,last_name,description,status,role_in_project)"+
-      "SELECT user_key,$1,$2,$3,1,1 FROM x RETURNING *)"+
+      "SELECT user_key,$1,$2,$3,0,0 FROM x RETURNING *)"+
       "SELECT * FROM y;";
       db.any(sqlReq,[item.name, item.last_name, item.about])
       .then(data=>{
-        console.log('Express addUser res:'+JSON.stringify(data));      // your JSON
-          res.send(JSON.stringify(data));    // echo the result back
-      })
+        console.log('Express addUser res:'+JSON.stringify(data));  
+        res.send(JSON.stringify(data));    // echo the result back
+        
+        if (req.body.item.profilePic){
+            var bodyData = req.body.item.profilePic;
+            var imageBuffer = decodeBase64Image(bodyData);
+            updateUserImg(data[0].uuid_key,imageBuffer);
+            console.log('addUser updateUserImg:', imageBuffer.type);
+            console.log('addUser req.body.item.uuid_key:', JSON.stringify(data[0].uuid_key));
+        }
+    
+        })
 });
-
+app.post('/updateUserImg', function (req, res) {
+    var item =req.body.item;
+    updateUserImg(item.uuid_key,item.url);
+})
 app.post('/delUser', function(req, res){
     console.log('Express delUser:'+JSON.stringify(req.body));      // your JSON
     var item =req.body.item;
@@ -196,7 +210,8 @@ app.post('/delUser', function(req, res){
     const makeAsyncRequest = async () => {
         var deletedUser = await  db.any('DELETE FROM users where uuid_key=$1 RETURNING *',[item.uuid_key]);
         await  db.any('DELETE FROM user_cred where user_key=$1 RETURNING *',[item.uuid_key]);
-        res.send(JSON.stringify(deletedUser));    // send SQL result    
+        res.send(JSON.stringify(deletedUser));    // send SQL result 
+        console.log('Express delUser deletedUser:'+JSON.stringify(deletedUser));      // your JSON   
       }
       makeAsyncRequest()
         .catch(err => {
@@ -205,52 +220,30 @@ app.post('/delUser', function(req, res){
 
 });
     
-app.post('/toggleUserActive', function(req, res){
-    console.log('updateUser:'+JSON.stringify(req.body));      // your JSON
-    item = req.body.item;
-    str=objToSQLforUpdate(item);
-    strSQL='UPDATE users SET '+str+' WHERE users.uuid_key =$1';
-    console.log(strSQL);
-    /*db.any(strSQL,[item.uuid_key])
-        .then((res)=>{
-             mess="УСПЕШНО";
-            res.send(mess);    // send SQL responce 
-            console.log('updateUser res:'+JSON.stringify(mess));      // your JSON
-        })
-        .catch (err=>{
-            if (Object.keys(err).length>0){
-                 mess="С ОШИБКОЙ";
-            } else{
-                 mess="УСПЕШНО";
-            }
-            res.send(JSON.stringify(mess));    // send error
-            console.log('updateUser:'+JSON.stringify(err));      // your JSON
-            console.log('updateUser:'+JSON.stringify(mess));      // your JSON
-        })*/
-});
 app.post('/updateUser', function(req, res){
-    console.log('updateUser:'+JSON.stringify(req.body));      // your JSON
-    item = req.body.item;
-    str=objToSQLforUpdate(item);
-    strSQL='UPDATE users SET '+str+' WHERE users.uuid_key =$1';
-    console.log(strSQL);
-    db.any(strSQL,[item.uuid_key])
-        .then((res)=>{
-             mess="УСПЕШНО";
-            res.send(mess);    // send SQL responce 
-            console.log('updateUser res:'+JSON.stringify(mess));      // your JSON
-        })
-        .catch (err=>{
-            if (Object.keys(err).length>0){
-                 mess="С ОШИБКОЙ";
-            } else{
-                 mess="УСПЕШНО";
-            }
-            res.send(JSON.stringify(mess));    // send error
-            console.log('updateUser:'+JSON.stringify(err));      // your JSON
-            console.log('updateUser:'+JSON.stringify(mess));      // your JSON
-        })
-});
+    const makeAsyncRequestupdateUser = async () => {
+        item = req.body.item;
+
+        if (req.body.profilePic){
+            var bodyData = req.body.profilePic;
+            var imageBuffer = decodeBase64Image(bodyData);
+            img_id= await updateUserImg(item.uuid_key,imageBuffer);
+            console.log('updateUserafter updateUserImg -> img_id:', img_id);
+            item['img_id']=img_id[0];
+            
+        }
+
+        str=objToSQLforUpdate(item);
+        strSQL='UPDATE users SET '+str+' WHERE users.uuid_key =$1 RETURNING *';
+        console.log('updateUser strSQL:', strSQL);
+        updatedUserRet = await db.any(strSQL,[item.uuid_key])
+        updatedUser = await db.any('SELECT * FROM users WHERE users.uuid_key =$1',[item.uuid_key])
+        updatedUser[0]['ext']=img_id[1]
+        console.log('updateUser 1 updatedUser:', updatedUser);
+        res.send(updatedUser); 
+    }
+    makeAsyncRequestupdateUser()
+})
 
 app.post('/getUserList', function(req, res){
     console.log("getUserList begin");
@@ -264,9 +257,9 @@ app.post('/getUserList', function(req, res){
             }
         };    
         console.log('getUserList async start:------"'+JSON.stringify(dataWithDir));
-        dataWithDir.dir.role_in_project = await  db.any('SELECT ur.id as value, ur.caption as label FROM "public".user_roles ur	ORDER BY ur.id ASC');
-        dataWithDir.dir.status = await db.any('SELECT us.id as value, us.caption as label FROM "public".user_status us ORDER BY us.id ASC');
-        dataWithDir.users = await db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization,u.img_ref, ur.caption as role_in_project, us.caption as status FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )  INNER JOIN user_status us ON ( u.status = us.id  )',[]);
+        dataWithDir.dir.role_in_project = await  db.any('SELECT ur.id as value, ur.caption as label FROM user_roles ur	ORDER BY ur.id ASC');
+        dataWithDir.dir.status = await db.any('SELECT us.id as value, us.caption as label FROM user_status us ORDER BY us.id ASC');
+        dataWithDir.users = await db.any("SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization,u.img_id, ur.caption as role_in_project, us.caption as status,concat( f.id,'.',f.extention )as url FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )  INNER JOIN user_status us ON ( u.status = us.id  ) LEFT OUTER JOIN files f ON( u.img_id =f.id)",[]);
         console.log('async end:------"'+JSON.stringify(dataWithDir));
         res.send(JSON.stringify(dataWithDir));    // send SQL result    
       }
@@ -297,6 +290,48 @@ function objToSQLforUpdate (item){
     return str;
 }
 
+function decodeBase64Image(dataString) {
+    var matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
+      response = {};
+  
+    if (matches.length !== 3) {
+      return new Error('Invalid input string');
+    }
+  
+    response.type = matches[1];
+    response.data = new Buffer(matches[2], 'base64');
+
+    return response;
+}
+
+function updateUserImg (uuidKey, imgBuf){
+    const makeAsyncRequest = async () => {
+        if (imgBuf.type==="image/jpeg") {var extention = 'jpg'} else { extention=''};
+        var fileId = await db.any('INSERT INTO files (file_type, extention) values ($1,$2) RETURNING id',[imgBuf.type,extention]);
+        console.log("updateUserImg fileId:", fileId[0].id);
+        console.log("updateUserImg uuidKey:", uuidKey);
+        console.log("updateUserImg imgBuf:", imgBuf);
+        console.log("updateUserImg extention:", extention);
+        var fileName=img_db_ref+fileId[0].id+'.'+extention;
+        await fs.writeFile(fileName, imgBuf.data , function(err, data) {
+            if (err) {
+                console.log('file write err', err);
+            }
+                console.log('file write success');
+                var fileSize= fs.statSync(fileName).size;
+                console.log("file write success fileSize:", fileSize);
+
+                 db.any('UPDATE files SET file_size=$2 where id=$1',[fileId[0].id,fileSize]);
+                // db.any('UPDATE users SET img_id=$2 where uuid_key=$1 RETURNING img_id',[uuidKey,fileId[0].id]);
+            });
+        console.log('updateUserImg', fileId[0].id);
+        return   [fileId[0].id,extention];    
+    }
+      return makeAsyncRequest()
+        .catch(err => {
+            console.log(err);
+        })
+  }
 app.listen(port);
 console.log("EXPRESS: Listening on port:" + port);
 
