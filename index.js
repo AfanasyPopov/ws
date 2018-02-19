@@ -157,7 +157,7 @@ app.get('/', function(req, res, next) {
 app.post('/login', function(req, res){
 	console.log('Express:'+JSON.stringify(req.body));      // your JSON
     console.log('login event: ' + req.body.email +';'+req.body.password);
-    db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization, ur.role_name, uc.user_pass FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )   INNER JOIN user_cred uc ON ( u.uuid_key = uc.user_key  ) WHERE u.email=$1 AND uc.user_pass=$2',[req.body.email,req.body.password])
+    db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization, ur.role_name, uc.user_pass, u.img_id,f.extention FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )   INNER JOIN user_cred uc ON ( u.uuid_key = uc.user_key  ) LEFT OUTER JOIN files f ON (f.id=u.img_id) WHERE u.email=$1 AND uc.user_pass=$2',[req.body.email,req.body.password])
         .then(data => {
             console.log('login event/DATA:', data);
             if (data.length>0 ){
@@ -181,10 +181,10 @@ app.post('/login', function(req, res){
 app.post('/addUser', function(req, res){
     var item =req.body.item;
     sqlReq="WITH x AS (INSERT INTO user_cred (user_key) VALUES (uuid_generate_v4()) RETURNING user_key),"+
-      "y AS (INSERT INTO users ( uuid_key,username,last_name,description,status,role_in_project)"+
+      "y AS (INSERT INTO users ( uuid_key,username,last_name,email,status,role_in_project)"+
       "SELECT user_key,$1,$2,$3,0,0 FROM x RETURNING *)"+
       "SELECT * FROM y;";
-      db.any(sqlReq,[item.name, item.last_name, item.about])
+      db.any(sqlReq,[item.name, item.last_name, item.email])
       .then(data=>{
         console.log('Express addUser res:'+JSON.stringify(data));  
         res.send(JSON.stringify(data));    // echo the result back
@@ -238,12 +238,49 @@ app.post('/updateUser', function(req, res){
         console.log('updateUser strSQL:', strSQL);
         updatedUserRet = await db.any(strSQL,[item.uuid_key])
         updatedUser = await db.any('SELECT * FROM users WHERE users.uuid_key =$1',[item.uuid_key])
-        updatedUser[0]['ext']=img_id[1]
+        if (req.body.profilePic){
+            updatedUser[0]['ext']=img_id[1]
+        }
         console.log('updateUser 1 updatedUser:', updatedUser);
         res.send(updatedUser); 
     }
     makeAsyncRequestupdateUser()
 })
+app.post('/passRepGetData', function(req, res){
+    const makeAsyncRequestupdateUser = async () => {
+        item = req.body;
+        item.uuid_key=item.secretStr.slice(0, 36);
+        console.log('passRepGetData item:', item);
+        userData = await db.any('SELECT * FROM users WHERE users.uuid_key =$1',[item.uuid_key])
+        console.log('passRepGetData userPass:', userData);
+        res.send(userData); 
+    }
+    makeAsyncRequestupdateUser()
+})
+
+app.post('/passRepGetLink', function(req, res){
+    const makeAsyncRequestupdateUser = async () => {
+        console.log('passRepGetLink req.body:',req.body);
+        userLink = await db.any("SELECT u.email,uc.user_pass,u.uuid_key FROM users u INNER JOIN user_cred uc ON(u.uuid_key=uc.user_key) WHERE u.uuid_key =$1",[req.body.uuid_key])
+        console.log('passRepGetLink userLink:', userLink);
+
+        res.send(userLink); 
+    }
+    makeAsyncRequestupdateUser()
+})
+
+app.post('/passRepSetPass', function(req, res){
+    const makeAsyncRequestupdateUser = async () => {
+        console.log('passRepGetData req:',item = req.body);
+        item.uuid_key=item.secretStr.slice(0, 36);
+        updatedPas = await db.any('UPDATE user_cred  SET user_pass=$2 WHERE user_key =$1 RETURNING * ',[item.uuid_key, item.password])
+        updatedPas[0]['mess']='УСПЕШНО'
+        console.log('passRepSetPass updatedPas:', updatedPas);
+        res.send(updatedPas); 
+    }
+    makeAsyncRequestupdateUser()
+})
+
 
 app.post('/getUserList', function(req, res){
     console.log("getUserList begin");
@@ -306,7 +343,7 @@ function decodeBase64Image(dataString) {
 
 function updateUserImg (uuidKey, imgBuf){
     const makeAsyncRequest = async () => {
-        if (imgBuf.type==="image/jpeg") {var extention = 'jpg'} else { extention=''};
+        if (imgBuf.type==="image/jpeg") {var extention = 'jpg'} else {if (imgBuf.type==='image/png') {var extention = 'png'} else { extention=''}};
         var fileId = await db.any('INSERT INTO files (file_type, extention) values ($1,$2) RETURNING id',[imgBuf.type,extention]);
         console.log("updateUserImg fileId:", fileId[0].id);
         console.log("updateUserImg uuidKey:", uuidKey);
