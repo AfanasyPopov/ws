@@ -149,6 +149,7 @@ app.use(function(req, res, next) {
 //app.use(bodyParser.json());
 
 app.use(bodyParser.json({ limit: '50mb' }))
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req, res, next) {
   // Handle the get for this route
@@ -244,7 +245,152 @@ app.post('/delProject', function(req, res){
     makeAsyncRequest()
 })
         
+//---------start--------GANTT------
+var Promise = require('bluebird');
+require("date-format-lite");
 
+ 
+app.get("/data", function (req, res) { 
+  Promise.all([
+    db.query("SELECT * FROM gantt_tasks"),
+    db.query("SELECT * FROM gantt_links")
+  ]).then(function(results){
+    var tasks = results[0],
+    links = results[1];
+ 
+    for (var i = 0; i < tasks.length; i++) {
+      tasks[i].start_date = tasks[i].start_date.format("YYYY-MM-DD hh:mm:ss");
+      tasks[i].open = true;
+    }
+ 
+    res.send({
+      data: tasks,
+      collections: { links: links }
+    });
+ 
+  }).catch(function(error) {
+    sendResponse(res, "error", null, error);
+  });
+});
+// add a new task
+app.post("/data/task", function (req, res) { 
+    var task = getTask(req.body);  
+   
+    db.query("INSERT INTO gantt_tasks(text, start_date, duration, progress, parent)"
+      + " VALUES ($1,$2,$3,$4,$5)", 
+      [task.text, task.start_date, task.duration, task.progress, task.parent])
+    .then (function (result) {
+      sendResponse(res, "inserted", result.insertId);
+    })
+    .catch(function(error) {
+      sendResponse(res, "error", null, error); 
+    });
+  });
+   
+  // update a task
+  app.put("/data/task/:id", function (req, res) {
+      console.log("/data/task/:id  :"+JSON.stringify(req.body))
+    var sid = req.params.id,
+      task = getTask(req.body);
+   
+    db.query("UPDATE gantt_tasks SET text = $1, start_date = $2, "
+      + "duration = $3, progress = $4, parent = $5 WHERE id = $6",
+      [task.text, task.start_date, task.duration, task.progress, task.parent, sid])
+    .then (function(result) {
+      sendResponse(res, "updated");
+    })
+    .catch(function(error) {
+      sendResponse(res, "error", null, error); 
+    });
+  });
+   
+  // delete a task
+  app.delete("/data/task/:id", function (req, res) {
+    var sid = req.params.id;
+    db.query("DELETE FROM gantt_tasks WHERE id = $1", [sid])
+    .then (function (result) {
+      sendResponse(res, "deleted");
+    })
+    .catch(function(error) {
+      sendResponse(res, "error", null, error); 
+    });
+  });
+   
+  // add a link
+  app.post("/data/link", function (req, res) {
+    var link = getLink(req.body);
+   
+    db.query("INSERT INTO gantt_links(source, target, type) VALUES ($1,$2,$3)", 
+      [link.source, link.target, link.type])
+    .then (function (result) {
+      sendResponse(res, "inserted", result.insertId);
+    })
+    .catch(function(error) {
+      sendResponse(res, "error", null, error); 
+    });
+  });
+   
+  // update a link
+  app.put("/data/link/:id", function (req, res) {
+    var sid = req.params.id,
+      link = getLink(req.body);
+   
+    db.query("UPDATE gantt_links SET source = $1, target = $2, type = $3 WHERE id = $4", 
+      [link.source, link.target, link.type, sid])
+    .then (function (result) {
+      sendResponse(res, "updated");
+    })
+    .catch(function(error) {
+      sendResponse(res, "error", null, error); 
+    });
+  });
+   
+  // delete a link
+  app.delete("/data/link/:id", function (req, res) {
+    var sid = req.params.id;
+    db.query("DELETE FROM gantt_links WHERE id = $1", 
+      [sid])
+    .then (function (result) {
+      sendResponse(res, "deleted");
+    })
+    .catch(function(error) {
+        sendResponse(res, "error", null, error); 
+    });
+  });
+   
+   
+  function getTask(data) {
+    return {
+      text: data.text,
+      start_date: data.start_date.date("YYYY-MM-DD"),
+      duration: data.duration,
+      progress: data.progress || 0,
+      parent: data.parent
+    };
+  }
+   
+  function getLink(data) {
+    return {
+      source: data.source,
+      target: data.target,
+      type: data.type
+    };
+  }
+   
+  function sendResponse(res, action, tid, error) {
+   
+    if (action == "error")
+      console.log(error);
+   
+    var result = {
+      action: action
+    };
+    if (tid !== undefined && tid !== null)
+      result.tid = tid;
+   
+    res.send(result);
+  }
+  //-----end-----GANTT----------------
 
 //----end-----------PROJECT'S EVENTS---------------------------
 
@@ -252,7 +398,7 @@ app.post('/delProject', function(req, res){
 app.post('/login', function(req, res){
 	console.log('Express:'+JSON.stringify(req.body));      // your JSON
     console.log('login event: ' + req.body.email +';'+req.body.password);
-    db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization, ur.role_name, uc.user_pass, u.img_id,f.extention FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )   INNER JOIN user_cred uc ON ( u.uuid_key = uc.user_key  ) LEFT OUTER JOIN files f ON (f.id=u.img_id) WHERE u.email=$1 AND uc.user_pass=$2',[req.body.email,req.body.password])
+    db.any('SELECT u.id, u.uuid_key, u.username, u.last_name, u.email, u.active, u.description, u.contragent_flag, u.user_flag, u.group_flag, u.organization, ur.role_name, uc.user_pass, u.img_id,f.extention, u.status FROM users u INNER JOIN user_roles ur ON ( u.role_in_project = ur.id  )   INNER JOIN user_cred uc ON ( u.uuid_key = uc.user_key  ) LEFT OUTER JOIN files f ON (f.id=u.img_id) WHERE u.email=$1 AND uc.user_pass=$2',[req.body.email,req.body.password])
         .then(data => {
             console.log('login event/DATA:', data);
             if (data.length>0 ){
@@ -299,6 +445,7 @@ app.post('/getUserList', function(req, res){
         })
     console.log("getUserList end");
 });
+
 
 //----end-----------LOGIN---------------------------
 

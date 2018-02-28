@@ -4,7 +4,9 @@
   "description": "The Project description",
   "main": "browser.js",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
+    "date-format-lite": "^17.7.0",
     "express": "^4.16.2",
     "http-server": "^0.10.0",
     "ipaddr.js": "^1.5.4",
