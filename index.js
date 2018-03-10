@@ -251,8 +251,9 @@ require("date-format-lite");
 
  
 app.get("/data", function (req, res) { 
+  console.log("load data /data:"+JSON.stringify(req.body))
   Promise.all([
-    db.query("SELECT * FROM gantt_tasks"),
+    db.query("SELECT * FROM gantt_tasks ORDER BY sortorder ASC"),
     db.query("SELECT * FROM gantt_links")
   ]).then(function(results){
     var tasks = results[0],
@@ -274,28 +275,37 @@ app.get("/data", function (req, res) {
 });
 // add a new task
 app.post("/data/task", function (req, res) { 
+    console.log("add a task /data/task  :"+JSON.stringify(req.body))
     var task = getTask(req.body);  
-   
-    db.query("INSERT INTO gantt_tasks(text, start_date, duration, progress, parent)"
-      + " VALUES ($1,$2,$3,$4,$5)", 
-      [task.text, task.start_date, task.duration, task.progress, task.parent])
-    .then (function (result) {
-      sendResponse(res, "inserted", result.insertId);
-    })
-    .catch(function(error) {
-      sendResponse(res, "error", null, error); 
-    });
+    db.query("SELECT MAX(sortorder) AS maxOrder FROM gantt_tasks")
+    .then (function(result) {  
+        // assign max sort order to the new task
+        var orderIndex = (result[0].maxOrder || 0) + 1;
+
+        return db.query('INSERT INTO gantt_tasks(text, start_date, duration, progress, parent, type, sortorder)'
+        + " VALUES ($1,$2,$3,$4,$5,$6,$7)", 
+        [task.text, task.start_date, task.duration, task.progress, task.parent, task.type, orderIndex])
+        .then (function (result) {
+        sendResponse(res, "inserted", result.insertId);
+        })
+        .catch(function(error) {
+        sendResponse(res, "error", null, error); 
+        });
   });
+});
    
   // update a task
   app.put("/data/task/:id", function (req, res) {
-      console.log("/data/task/:id  :"+JSON.stringify(req.body))
-    var sid = req.params.id,
+      console.log("update a task /data/task/:id  :"+JSON.stringify(req.body))
+      var sid = req.params.id,
+      target = req.body.target,
       task = getTask(req.body);
-   
-    db.query("UPDATE gantt_tasks SET text = $1, start_date = $2, "
-      + "duration = $3, progress = $4, parent = $5 WHERE id = $6",
-      [task.text, task.start_date, task.duration, task.progress, task.parent, sid])
+    Promise.all([
+    db.query('UPDATE gantt_tasks SET text = $1, start_date = $2, '
+      + 'duration = $3, progress = $4, parent = $5, type=$6 WHERE id = $7',
+      [task.text, task.start_date, task.duration, task.progress, task.parent,task.type, sid]),
+      updateOrder(sid, target)
+    ])
     .then (function(result) {
       sendResponse(res, "updated");
     })
@@ -305,7 +315,8 @@ app.post("/data/task", function (req, res) {
   });
    
   // delete a task
-  app.delete("/data/task/:id", function (req, res) {
+  app.delete("delete a task /data/task/:id", function (req, res) {
+    console.log("delete a task /data/task/:id  :"+JSON.stringify(req.body))
     var sid = req.params.id;
     db.query("DELETE FROM gantt_tasks WHERE id = $1", [sid])
     .then (function (result) {
@@ -318,6 +329,7 @@ app.post("/data/task", function (req, res) {
    
   // add a link
   app.post("/data/link", function (req, res) {
+    console.log("add a link  /data/link :"+JSON.stringify(req.body))
     var link = getLink(req.body);
    
     db.query("INSERT INTO gantt_links(source, target, type) VALUES ($1,$2,$3)", 
@@ -332,6 +344,7 @@ app.post("/data/task", function (req, res) {
    
   // update a link
   app.put("/data/link/:id", function (req, res) {
+    console.log("update a link  /data/link/:id :"+JSON.stringify(req.body))
     var sid = req.params.id,
       link = getLink(req.body);
    
@@ -347,6 +360,7 @@ app.post("/data/task", function (req, res) {
    
   // delete a link
   app.delete("/data/link/:id", function (req, res) {
+    console.log("delete a link  /data/link/:id :"+JSON.stringify(req.body))
     var sid = req.params.id;
     db.query("DELETE FROM gantt_links WHERE id = $1", 
       [sid])
@@ -365,9 +379,12 @@ app.post("/data/task", function (req, res) {
       start_date: data.start_date.date("YYYY-MM-DD"),
       duration: data.duration,
       progress: data.progress || 0,
-      parent: data.parent
+      parent: data.parent,
+      type:data.type
+     // sortorder:data.sortorder
     };
   }
+  
    
   function getLink(data) {
     return {
@@ -390,6 +407,34 @@ app.post("/data/task", function (req, res) {
    
     res.send(result);
   }
+
+  function updateOrder(taskId, target){
+    var nextTask = false;
+    var targetOrder;
+   
+    if(target.startsWith("next:")) {
+      target = target.substr("next:".length);
+      nextTask = true;
+    }
+   
+    return db.query("SELECT * FROM gantt_tasks WHERE id = $1", [target])
+      .then (function(result) {
+        if (!result[0])
+          return Promise.resolve();
+   
+        targetOrder = result[0].sortorder;
+        if(nextTask)
+          targetOrder++;
+   
+        return db.query("UPDATE gantt_tasks SET sortorder = sortorder + 1 "
+          +" WHERE sortorder >= $1", [targetOrder])
+        .then (function(result) {
+          return db.query("UPDATE gantt_tasks SET sortorder = $1 WHERE id = $2",
+            [targetOrder, taskId]);
+        });
+      });
+  }
+
   //-----end-----GANTT----------------
 
 //----end-----------PROJECT'S EVENTS---------------------------
@@ -659,4 +704,3 @@ function getUsersList(){
 
 app.listen(port);
 console.log("EXPRESS: Listening on port:" + port);
-
